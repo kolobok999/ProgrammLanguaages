@@ -7,10 +7,10 @@ using static Task_2.Library;
 int[] ChangeElements(int[] arr)
 {
     int[] newArr = new int[arr.Length];
-    
+
     for (int i = 0; i < arr.Length; i++)
     {
-        newArr[i] = arr[i] * (-1);
+        newArr[i] = - arr[i];
     }
     return newArr;
 }

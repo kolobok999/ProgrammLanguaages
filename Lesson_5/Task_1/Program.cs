@@ -31,6 +31,7 @@ int FindNegativeSum(int[] arr)
 }
 
 int[] array = new int[12];
+
 WriteArray(array, -9, 10);
 
 
