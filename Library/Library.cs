@@ -61,4 +61,47 @@ public class Library
             }
         }
     }
+
+    public static int ReadNumber(string text)  //Чтение числа с клавиатуры c входящим сообщением
+    {
+        int num;
+        while (true)
+        {
+            try
+            {
+                System.Console.WriteLine(text);
+                System.Console.WriteLine("Введите число");
+                num = int.Parse(Console.ReadLine());
+                return num;
+            }
+            catch
+            {
+                System.Console.WriteLine("Это не число!!! \n");
+            }
+        }
+    }
+
+    public static int[,] FillMatrix(int[,] matr, int minValue, int maxValue)
+    {
+        for (int i = 0; i < matr.GetLength(0); i++)
+        {
+            for (int j = 0; j < matr.GetLength(1); j++)
+            {
+                matr[i, j] = new Random().Next(minValue, maxValue);
+            }
+        }
+        return matr;
+    }
+
+    public static void PrintMatrix(int[,] matr)
+    {
+        for (int i = 0; i < matr.GetLength(0); i++)
+        {
+            for (int j = 0; j < matr.GetLength(1); j++)
+            {
+                System.Console.Write($"{matr[i, j]} ");
+            }
+            System.Console.WriteLine();
+        }
+    }
 }
