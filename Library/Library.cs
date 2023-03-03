@@ -19,6 +19,16 @@ public class Library
         return output;
     }
 
+    public static String PrintArray(double[] arr) //Печатает массив
+    {
+        string output = String.Empty;
+        for (int i = 0; i < arr.Length; i++)
+        {
+            output += (Math.Round(arr[i], 2)) + " ";
+        }
+        return output;
+    }
+
     public static void WriteArray(int[] arr, int a, int b) // Заполняет массив случайными числами в промежутке [a, b)
     {
         for (int i = 0; i < arr.Length; i++)
