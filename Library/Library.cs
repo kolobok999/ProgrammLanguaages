@@ -9,6 +9,14 @@ public class Library
         arr[b] = temp;
     }
 
+    public static void SwapMatrix(int[,] matr, int[] a, int[] b)  // Меняет местами элеминты двумерного массива
+    {
+        int temp;
+        temp = matr[a[0], a[1]];
+        matr[a[0], a[1]] = matr[b[0], b[1]];
+        matr[b[0], b[1]] = temp;
+    }
+
     public static String PrintArray(int[] arr) //Печатает массив
     {
         string output = String.Empty;
