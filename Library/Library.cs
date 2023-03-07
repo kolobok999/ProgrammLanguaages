@@ -9,12 +9,12 @@ public class Library
         arr[b] = temp;
     }
 
-    public static void SwapMatrix(int[,] matr, int[] a, int[] b)  // Меняет местами элеминты двумерного массива
+    public static void SwapMatrix(int[,] matr, int[] firstElementIndex, int[] secondElementIndex)  // Меняет местами элеминты двумерного массива
     {
         int temp;
-        temp = matr[a[0], a[1]];
-        matr[a[0], a[1]] = matr[b[0], b[1]];
-        matr[b[0], b[1]] = temp;
+        temp = matr[firstElementIndex[0], firstElementIndex[1]];
+        matr[firstElementIndex[0], firstElementIndex[1]] = matr[secondElementIndex[0], secondElementIndex[1]];
+        matr[secondElementIndex[0], secondElementIndex[1]] = temp;
     }
 
     public static String PrintArray(int[] arr) //Печатает массив
